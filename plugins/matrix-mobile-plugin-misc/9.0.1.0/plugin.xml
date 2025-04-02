@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin compile = "true" id="matrix-mobile-plugin-misc" version="9.0.1.0" type="basic">
+    <name>Misc</name>
+    <description>MatrixMobile Misc Plugin</description>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+        </config-file>
+
+        <js-module src="www/misc.js" name="misc">
+            <clobbers target="matrixMobile.plugin.misc" />
+        </js-module>
+
+        <config-file target="PluginConfig.yaml">
+            <feature name="MiscPlugin">
+                <param name="android-package" value="matrix.mobile.plugin.misc.MiscPlugin"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <lib-file src="libs/matrix-mobile-plugin-misc-9.0.1.0.jar"/>
+
+    </platform>
+
+
+</plugin>

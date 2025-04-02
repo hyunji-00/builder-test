@@ -1,0 +1,74 @@
+<resources>
+    <!--Basic-->
+    <string name="error_N000">서버에서 환경 조회에 실패 했습니다. 잠시후에 다시 시도해 주세요.</string>
+    <string name="error_N001">서버에서 응답이 없습니다. 잠시후에 다시 시도해 주세요.</string>
+    <string name="error_N002">서버와 App의 App ID가 서로 다릅니다. 서버 관리자에게 문의해 주세요.</string>
+    <string name="error_N003">Websquare Engine JS 파일 생성에 실패했습니다.</string>
+    <string name="error_N004">Server Error가 발생하였습니다.</string>
+    <string name="error_N005">MatrixMobile 를 구동하는데 실패하였습니다.</string>
+    <string name="error_N006">서버 목록 구성에 실패하였습니다.</string>
+    <string name="error_N007">VPN을 이용하여 연결되였습니다.</string>
+    <string name="error_F001">엔진 ZIP 파일의 압축해제에 실패했습니다.</string>
+    <string name="error_F002">Resource ZIP 파일의 압축해제에 실패했습니다.</string>
+    <string name="error_F003">Custom Update ZIP 파일의 압축해제에 실패했습니다.</string>
+    <string name="error_F004">Refresh Update ZIP 파일의 압축해제에 실패했습니다.</string>
+    <string name="error_F005">Refresh Update Hash Table이 유효하지 않습니다.</string>
+    <string name="error_F006">Refresh Update 대상 파일을 다운로드하는데 실패하였습니다.</string>
+    <string name="error_F007">Websquare License가 유효하지 않습니다.</string>
+    <string name="error_F009">현재 사용중인 %s 버전으로는 앱을 실행 할 수 없습니다. Play Store에서 최신 버전으로 업데이트 후 재실행 바랍니다.</string>
+    <string name="error_W1004">MatrixMobile License 가 유효하지 않습니다.</string>
+    <string name="error_W1005">WebView 생성에 실패했습니다.</string>
+    <string name="error_O1000">오프라인 모드 설정 중 오류가 발생하였습니다.</string>
+    <string name="error_O1001">오프라인 모드를 사용하기 위한 MatrixMobile 설정이 되어 있지 않습니다.</string>
+    <string name="permission_denied">권한 사용에 동의해 주시지 않으면 App을 시작할 수 없습니다.</string>
+    <string name="permission_denied_rationale">권한 사용이 중지되어 있습니다. \nApp을 재설치 하시거나 설정에서 App 초기화를 진행하신 후 실행해 주시기 바랍니다.</string>
+    <string name="error_finish">종료</string>
+    <string name="error_retry">재시도</string>
+    <string name="exit_or_not">종료하시겠습니까?</string>
+    <string name="app_init">App이 초기화 된 후 종료됩니다.</string>
+    <string name="go_to_store_message">%s 앱이 설치되어 있지 않습니다. 설치 페이지로 이동하시겠습니까?</string>
+    <string name="offline_first_exec">오프라인 모드는 온라인 모드에서 최초 실행 후 사용 가능합니다. App을 종료합니다.</string>
+    <string name="offline_alert">네트워크가 연결되어있지 않습니다. 오프라인 모드로 실행하시겠습니까? 일부 기능이 제한될 수 있습니다.</string>
+    <string name="webview_camera_permission">카메라 권한이 허용 되어 있지 않으면 카메라를 사용 할 수 없습니다.\n카메라 권한을 허용하시겠습니까?</string>
+    <string name="resource_download_message">추가로 %s를 다운로드합니다.\n진행하시겠습니까?</string>
+    <string name="recording_app_not_exists">음성 녹음에 사용될 App이 설치되어 있지 않습니다.</string>
+    <string name="permission_denied_camera">카메라 권한 사용이 중지되어 있습니다.\n설정에서 권한 사용을 허용하신 후 사용해 주시기 바랍니다.</string>
+    <string name="checkRefreshUpdate_progress">변경 사항을 확인중 입니다.</string>
+    <string name="checkRefreshUpdate_restart">변경 사항을 적용하기 위해 App을 재시작해야 합니다.\nApp을 종료합니다.</string>
+
+    <!-- WebView File Download -->
+    <string name="file_download_notification_description">파일 다운로드 중 입니다..</string>
+    <string name="file_download_start_toast">파일이 다운로드 됩니다.</string>
+    <string name="file_download_permission_toast">다운로드를 위해\n권한이 필요합니다.</string>
+
+    <!--Misc-->
+    <string name="action_close">닫기</string>
+    <string name="action_confirm">확인</string>
+    <string name="action_maxcount">최대 %s개의 파일을 선택하실 수 있습니다.</string>
+    <string name="action_download_complete">%s의 다운로드가 완료 되었습니다.</string>
+    <string name="empty_directory_hint">빈 디렉토리</string>
+    <string name="type_archive">압축파일</string>
+    <string name="type_certificate">인증서</string>
+    <string name="type_directory">디렉토리</string>
+    <string name="type_document">파일</string>
+    <string name="type_drawing">그림</string>
+    <string name="type_excel">스프레드시트</string>
+    <string name="type_image">이미지</string>
+    <string name="type_music">음악</string>
+    <string name="type_video">비디오</string>
+    <string name="type_pdf">PDF 문서</string>
+    <string name="type_power_point">프레젠테이션</string>
+    <string name="type_word">문서</string>
+    <string name="type_apk">APK</string>
+    <string name="action_download">다운로드 중</string>
+
+    <!--License-->
+    <string name="error_file">파일을 추가하세요</string>
+
+    <!--Biometric-->
+    <string name="title">인증</string>
+    <string name="subTitle">바이오 인증</string>
+    <string name="description"> 생체정보로 인증을 시작합니다</string>
+
+    <string name="action_setting"> %s기능을 사용할 수 없습니다.\n사용을 위해 설정으로 이동하시겠습니까?</string>
+</resources>

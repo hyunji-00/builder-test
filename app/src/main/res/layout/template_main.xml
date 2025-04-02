@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Main WebView -->
+    <FrameLayout
+        android:id="@+id/container_main_web_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <!-- ScreenPlugin 에서 startWebView 사용 시 addView 되는 container -->
+    <FrameLayout
+        android:id="@+id/container_start_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <!-- PaintPlugin 에서 addView 되는 container -->
+    <FrameLayout
+        android:id="@+id/container_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <!-- LicensePlugin 에서 addView 되는 container -->
+    <FrameLayout
+        android:id="@+id/container_license"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <!-- BarcodeScannerPlugin 에서 addView 되는 container -->
+    <FrameLayout
+        android:id="@+id/container_barcode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- Loading Layout Container Sample. -->
+    <FrameLayout
+        android:id="@+id/container_main_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

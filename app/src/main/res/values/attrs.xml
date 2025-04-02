@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BottomNavigationBehavior_Params">
+        <attr name="tabLayoutId" format="reference"></attr>
+    </declare-styleable>
+    <attr name="mfp_toolbar_theme" format="reference"/>
+</resources>

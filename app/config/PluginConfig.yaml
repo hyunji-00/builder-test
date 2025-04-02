@@ -1,0 +1,16 @@
+plugins:
+- name: Camera
+  onLoad: false
+  pluginClass: matrix.mobile.base.plugin.camera.CameraLauncher
+- name: NetworkStatus
+  onLoad: true
+  pluginClass: matrix.mobile.base.plugin.networkinformation.NetworkManager
+- name: Device
+  onLoad: true
+  pluginClass: matrix.mobile.base.plugin.device.DevicePlugin
+- name: InAppUpdatePlugin
+  onLoad: false
+  pluginClass: matrix.mobile.base.plugin.iau.InAppUpdatePlugin
+- name: AppPlugin
+  onLoad: false
+  pluginClass: matrix.mobile.plugin.app.AppPlugin

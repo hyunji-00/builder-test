@@ -1,0 +1,3 @@
+<resources>
+    <string name="websquare_excel_download_complete">엑셀 다운로드가 완료 되었습니다.\n[%s]</string>
+</resources>

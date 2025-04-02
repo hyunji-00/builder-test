@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFBB86FC</color>
+    <color name="colorPrimaryDark">#FF6200EE</color>
+    <color name="colorAccent">#FF03DAC5</color>
+    <color name="colorPoint1">#D9B341</color>
+    <color name="colorPoint2">#D9763D</color>
+    <color name="light_grey_10">#10000000</color>
+
+    <!--File Picker-->
+    <color name="empty_directory_hint">#c7c7c7</color>
+    <color name="compatibility_pressed_color">#1a000000</color>
+    <color name="compatibility_focus_color">#48000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="item_selected">#8871a2f6</color>
+</resources>

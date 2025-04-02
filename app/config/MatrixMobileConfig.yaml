@@ -1,0 +1,16 @@
+matrixMobile:
+  active: develop
+  profiles:
+    develop:
+      applicationId: inswave.wmatrix.template
+      appName: Template
+      appVersion: 0.0.2
+      appVersionCode: 1
+      minSdkVersion: 21
+      useServerSelectScreen: true
+      server:
+      - group: Servers
+        data:
+        - name: wmatrix
+          appId: inswave.wmatrix.mre
+          url: https://mre.inswave.kr

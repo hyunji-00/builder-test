@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin compile="true" id="matrix-mobile-plugin-log" type="basic" version="9.0.1.0">
+    <name>Log</name>
+    <description>MatrixMobile Log Plugin</description>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <js-module name="log" src="www/log.js">
+            <clobbers target="matrixMobile.plugin.log" />
+        </js-module>
+
+        <config-file target="PluginConfig.yaml">
+            <feature name="LogPlugin">
+                <param name="android-package" value="matrix.mobile.plugin.log.LogPlugin" />
+            </feature>
+        </config-file>
+
+        <lib-file src="libs/matrix-mobile-plugin-log-9.0.1.0.jar" />
+
+    </platform>
+
+
+</plugin>

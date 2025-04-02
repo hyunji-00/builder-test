@@ -1,0 +1,103 @@
+/*
+ * Copyright (C) Inswave Systems, Inc - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Inswave Systems <webmaster@inswave.com>, 2022
+ */
+
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        flatDir{
+            dirs(rootDir.absolutePath + "/plugins/lib")
+        }
+    }
+
+    dependencies {
+        classpath 'org.yaml:snakeyaml:2.3'
+        classpath 'matrixMobile:matrix-mobile-gradle-plugin:3.0.3'
+        classpath 'org.eclipse.jgit:org.eclipse.jgit:6.10.0.202406032230-r'
+        classpath 'com.google.code.gson:gson:2.10.1'
+    }
+}
+
+apply plugin: MatrixMobileGradlePlugin
+
+ext {
+    active = matrixMobile.active
+    applicationName = matrixMobile.applicationName
+    applicationId = matrixMobile.activeProfile.get("applicationId").toString()
+    versionCode = matrixMobile.activeProfile.get("appVersionCode").toString()
+    versionName = matrixMobile.activeProfile.get("appVersion").toString()
+    minSdk = matrixMobile.activeProfile.get("minSdkVersion").toString()
+    matrixMobileConfigJson = matrixMobile.matrixMobileConfigJson.toString()
+    pluginConfigJson = matrixMobile.pluginConfigJson.toString()
+    buildConfigJson = matrixMobile.buildConfigJson.toString()
+}
+
+tasks.register("releaseAlpha") {
+    doLast{
+        exec{
+            workingDir "../"
+            commandLine("fastlane", "alpha")
+        }
+    }
+}
+
+tasks.register("releaseBeta") {
+    doLast{
+        exec{
+            workingDir "../"
+            commandLine("fastlane", "beta")
+        }
+    }
+}
+
+tasks.register("releaseProduction") {
+    doLast{
+        exec{
+            workingDir "../"
+            commandLine("fastlane", "production")
+        }
+    }
+}
+
+/**
+ * gradlew 가 실행 권한이 없는 경우 해당 task 를 실행 하거나,
+ * chmod 755 ./gradlew 를 터미널에서 실행한다.
+ */
+tasks.register("permissionGradlew") {
+    group = "preBuild"
+
+    File gradlew = file("${rootDir}/gradlew")
+
+    if (gradlew.exists()) {
+        if (!gradlew.canExecute()) {
+            copy {
+                from("${rootDir}") {
+                    include 'gradlew'
+                }
+                rename('gradlew', 'gradlew_tmp')
+                into rootDir
+            }
+
+            gradlew.delete()
+
+            File tmp = file("${rootDir}/gradlew_tmp")
+            tmp.setExecutable(true)
+
+            copy {
+                from("${rootDir}") {
+                    include 'gradlew_tmp'
+                }
+                rename ('gradlew_tmp', 'gradlew')
+                into rootDir
+            }
+
+            tmp.delete()
+
+            println("::: permissionGradlew ::: complete.")
+        }
+    }
+}
