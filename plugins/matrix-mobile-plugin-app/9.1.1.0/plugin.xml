@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) Inswave Systems, Inc - All Rights Reserved
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited
+  ~ Proprietary and confidential
+  ~ Written by Inswave Systems <webmaster@inswave.com>, 2022
+  -->
+
+<plugin compile="true" id="matrix-mobile-plugin-app" version="9.1.1.0" type="basic">
+
+    <name>App</name>
+    <description>MatrixMobile App Plugin</description>
+
+    <!-- android -->
+    <platform name="android">
+
+        <js-module src="www/app.js" name="app">
+            <clobbers target="matrixMobile.plugin.app" />
+        </js-module>
+
+        <config-file target="PluginConfig.yaml">
+            <feature name="AppPlugin">
+                <param name="android-package" value="matrix.mobile.plugin.app.AppPlugin"/>
+            </feature>
+        </config-file>
+
+        <lib-file src="libs/matrix-mobile-plugin-app-9.1.1.0.jar" />
+
+    </platform>
+
+
+</plugin>

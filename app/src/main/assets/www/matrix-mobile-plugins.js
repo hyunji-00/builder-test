@@ -72,10 +72,10 @@ module.exports =
 module.exports.metadata =
 // TOP OF METADATA
 {
-  "matrix-mobile-plugin-camera": "9.0.1.0",
-  "matrix-mobile-plugin-network-information": "9.0.1.0",
-  "matrix-mobile-plugin-device": "9.0.1.0",
-  "matrix-mobile-plugin-app": "9.0.1.0"
+  "matrix-mobile-plugin-camera": "9.1.1.0",
+  "matrix-mobile-plugin-network-information": "9.1.1.0",
+  "matrix-mobile-plugin-device": "9.1.1.0",
+  "matrix-mobile-plugin-app": "9.1.1.0"
 };
 // BOTTOM OF METADATA
 });

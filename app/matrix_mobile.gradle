@@ -72,32 +72,8 @@ tasks.register("permissionGradlew") {
 
     File gradlew = file("${rootDir}/gradlew")
 
-    if (gradlew.exists()) {
-        if (!gradlew.canExecute()) {
-            copy {
-                from("${rootDir}") {
-                    include 'gradlew'
-                }
-                rename('gradlew', 'gradlew_tmp')
-                into rootDir
-            }
-
-            gradlew.delete()
-
-            File tmp = file("${rootDir}/gradlew_tmp")
-            tmp.setExecutable(true)
-
-            copy {
-                from("${rootDir}") {
-                    include 'gradlew_tmp'
-                }
-                rename ('gradlew_tmp', 'gradlew')
-                into rootDir
-            }
-
-            tmp.delete()
-
-            println("::: permissionGradlew ::: complete.")
-        }
+    if (gradlew.exists() && !gradlew.canExecute()) {
+        gradlew.setExecutable(true)
+        println("permissionGradlew task complete.")
     }
 }

@@ -48,6 +48,8 @@ kotlin {
 }
 
 android {
+    namespace = configApplicationId
+
     compileSdk = 35
     defaultConfig {
         applicationId = configApplicationId
@@ -61,7 +63,7 @@ android {
             useSupportLibrary = true
         }
 
-        base.archivesBaseName = "${configApplicationName}_v${configVersionName}_${SimpleDateFormat("yyyyMMddHHmm").format(Date())}"
+        base.archivesName.set("${configApplicationName}_v${configVersionName}_${SimpleDateFormat("yyyyMMddHHmm").format(Date())}")
     }
 
     compileOptions {
@@ -112,7 +114,6 @@ android {
     buildFeatures {
         viewBinding = true
     }
-    namespace = configApplicationId
 }
 
 //noinspection UseTomlInstead

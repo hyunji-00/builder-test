@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin compile="true" id="matrix-mobile-plugin-view" type="basic" version="9.1.1.0">
+    <name>View</name>
+    <description>MatrixMobile View Plugin</description>
+
+    <!-- android -->
+    <platform name="android">
+        <js-module name="view" src="www/view.js">
+            <clobbers target="matrixMobile.plugin.view" />
+        </js-module>
+
+        <config-file target="PluginConfig.yaml">
+            <feature name="ViewPlugin">
+                <param name="android-package" value="matrix.mobile.plugin.view.ViewPlugin" />
+            </feature>
+        </config-file>
+
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+        </config-file>
+
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <receiver android:enabled="true" android:exported="false" android:name="matrix.mobile.plugin.view.receiver.ViewPluginReceiver">
+
+                <intent-filter>
+                    <action android:name="matrix.mobile.plugin.action.notification" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                </intent-filter>
+
+            </receiver>
+
+        </config-file>
+
+        <lib-file src="libs/matrix-mobile-plugin-view-9.1.1.0.jar" />
+
+    </platform>
+</plugin>

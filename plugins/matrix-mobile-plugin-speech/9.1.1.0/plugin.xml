@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin compile="true" id="matrix-mobile-plugin-speech" type="basic" version="9.1.1.0">
+    <name>Speech</name>
+    <description>MatrixMobile Speech Plugin</description>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        </config-file>
+
+        <js-module name="speech" src="www/speech.js">
+            <clobbers target="matrixMobile.plugin.speech" />
+        </js-module>
+
+        <config-file target="PluginConfig.yaml">
+            <feature name="SpeechPlugin">
+                <param name="android-package" value="matrix.mobile.plugin.speech.SpeechPlugin" />
+            </feature>
+        </config-file>
+
+        <lib-file src="libs/matrix-mobile-plugin-speech-9.1.1.0.jar" />
+
+    </platform>
+
+</plugin>

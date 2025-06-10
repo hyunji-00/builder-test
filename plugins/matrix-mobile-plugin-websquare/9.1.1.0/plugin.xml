@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin compile="true" id="matrix-mobile-plugin-websquare" type="basic" version="9.1.1.0">
+    <name>WebSquare</name>
+    <description>MatrixMobile WebSquare Plugin</description>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <js-module name="websquare" src="www/websquare_plugin.js">
+            <clobbers target="matrixMobile.plugin.websquare" />
+        </js-module>
+
+        <config-file target="PluginConfig.yaml">
+            <feature name="WebSquarePlugin">
+                <param name="android-package" value="matrix.mobile.plugin.websquare.WebSquarePlugin" />
+            </feature>
+        </config-file>
+
+        <resource-file src="res/websquare_strings.xml" target="/res/values/websquare_strings.xml" />
+
+        <lib-file src="libs/matrix-mobile-plugin-websquare-9.1.1.0.jar" />
+
+    </platform>
+</plugin>

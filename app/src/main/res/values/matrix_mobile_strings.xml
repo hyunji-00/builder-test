@@ -1,0 +1,80 @@
+<resources>
+    <!--Basic-->
+    <string name="error_N001">No response from server. Please try again.</string>
+    <string name="error_N002">App ID is different from server.</string>
+    <string name="error_N003">Fail to generate WebSquare JS files.</string>
+    <string name="error_N004">Server Error is occurred.</string>
+    <string name="error_N005">Failed to start MatrixMobile.</string>
+    <string name="error_N006">Server list configuration failed.</string>
+    <string name="error_N007">Connected using VPN.</string>
+    <string name="error_N000">Fail to get config from server. Please try again.</string>
+    <string name="error_F001">Fail to unzip Engine zip file.</string>
+    <string name="error_F002">Fail to unzip Resource zip file.</string>
+    <string name="error_F003">Fail to unzip Custom Update zip file.</string>
+    <string name="error_F004">Fail to unzip Refresh Update zip file.</string>
+    <string name="error_F005">Refresh Update Hash Table is not valid.</string>
+    <string name="error_F006">Fail to download Refresh Update File.</string>
+    <string name="error_F007">WebSquare License is not valid.</string>
+    <string name="error_F009">The app cannot be run with the version of %s you are currently using. Please update to the latest version from Play Store and rerun.</string>
+    <string name="error_W1004">MatrixMobile License is not valid.</string>
+    <string name="error_W1005">Fail to create WebView.</string>
+    <string name="error_W1006">Sub WebView creation failed.</string>
+    <string name="error_O1000">An error occurred while setting offline mode.</string>
+    <string name="error_O1001">There is no MatrixMobile setup to use offline mode.</string>
+    <string name="permission_denied">Can not launch App without permissions.</string>
+    <string name="permission_denied_rationale">Please reinstall App or initial App data in system settings cause permissions are denied permanently.</string>
+    <string name="error_finish">Exit</string>
+    <string name="error_retry">Retry</string>
+    <string name="exit_or_not">Are you sure to exit?</string>
+    <string name="app_init">Application will be shut down after initialize.</string>
+    <string name="go_to_store_message">App %s is not installed. Would you like to go to the installation page?</string>
+    <string name="offline_first_exec">Offline mode can be launched only after online. App will be shut down.</string>
+    <string name="offline_alert">Network is not available. Do you want to launch with offline mode? Some actions could be unavailable.</string>
+    <string name="webview_camera_permission">If camera permission is not granted, you cannot use the camera.\nDo you want to grant camera permission?</string>
+    <string name="webview_audio_recorder_permission">Audio Record permission is not granted.\nDo you want to grant recording permission?</string>
+    <string name="resource_download_message">Additional %s will be downloaded.\nDo you want to proceed?</string>
+    <string name="not_exists_camera_application">The app to be used for camera is not installed.</string>
+    <string name="not_exists_audio_recording_application">The app to be used for voice recording is not installed.</string>
+    <string name="not_exists_video_recording_application">The app to be used for video recording is not installed.</string>
+    <string name="permission_denied_camera">Camera permission use has been disabled.\nPlease allow permission use in settings before using.</string>
+    <string name="permission_denied_record_audio">record audio permission use has been disabled.\nPlease allow permission use in settings before using.</string>
+    <string name="permission_denied_record_video">record audio and camera permission use has been disabled.\nPlease allow permission use in settings before using.</string>
+    <string name="checkRefreshUpdate_progress">We are checking the changes.</string>
+    <string name="checkRefreshUpdate_restart">You will need to restart the App for the changes to take effect.\nExit the App.</string>
+
+    <!-- WebView File Download -->
+    <string name="file_download_notification_description">Downloading file..</string>
+    <string name="file_download_start_toast">The file will be downloaded.</string>
+    <string name="file_download_permission_toast">Permission is required to download.</string>
+
+    <!--File Picker-->
+    <string name="action_close">Close</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_maxcount">You can select files up to %s.</string>
+    <string name="action_download_complete">Downloading %s is complete.</string>
+    <string name="empty_directory_hint">Empty directory</string>
+    <string name="type_archive">Archive</string>
+    <string name="type_certificate">Certificate</string>
+    <string name="type_directory">Directory</string>
+    <string name="type_document">File</string>
+    <string name="type_drawing">Picture</string>
+    <string name="type_excel">Spreadsheet</string>
+    <string name="type_image">Image</string>
+    <string name="type_music">Music</string>
+    <string name="type_video">Video</string>
+    <string name="type_pdf">PDF document</string>
+    <string name="type_power_point">Presentation</string>
+    <string name="type_word">Document</string>
+    <string name="type_apk">APK</string>
+    <string name="action_download">Downloading</string>
+
+    <!--License-->
+    <string name="error_file">Add files</string>
+
+    <!--Biometric-->
+    <string name="title">Authentication</string>
+    <string name="subTitle">biometric Authentication</string>
+    <string name="description">Authentication begins with biometric information</string>
+
+    <string name="action_setting"> %sThe feature is not available.\nWould you like to go to settings to enable it?</string>
+</resources>

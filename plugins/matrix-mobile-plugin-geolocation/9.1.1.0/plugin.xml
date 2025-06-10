@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin compile="true" id="matrix-mobile-plugin-geolocation" version="9.1.1.0" type="basic">
+    <name>Geolocation</name>
+    <description>MatrixMobile Geolocation Plugin</description>
+
+    <platform name="android">
+        <js-module src="www/geolocation.js" name="geolocation">
+            <clobbers target="navigator.geolocation" />
+        </js-module>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+        </config-file>
+
+        <config-file target="PluginConfig.yaml">
+            <feature name="Geolocation">
+                <param name="android-package" value="matrix.mobile.plugin.geolocation.Geolocation"/>
+            </feature>
+        </config-file>
+
+        <lib-file src="libs/matrix-mobile-plugin-geolocation-9.1.1.0.jar" />
+
+    </platform>
+
+</plugin>

@@ -1,16 +1,79 @@
 matrixMobile:
+
+  # 활성화 된 profile. (active 에 설정 한 profile 기준으로 앱이 빌드된다.)
   active: develop
+
+  # Profile 목록.
   profiles:
+
+    # 기본 Product Profile
+    product:
+
+      # Application Id (build.gradle.kts 내 applicationId 값에 세팅된다.)
+      applicationId: matrix.mobile.template
+
+      # Application Name. (앱 설치 시 보여지는 이름 - build.gradle.kts 내 applicationName 값에 세팅된다.)
+      appName: MatrixMobile(Product)
+
+      # App Version (build.gradle.kts 내 versionCode 에 세팅된다.)
+      appVersion: 0.0.1
+
+      # App Version Code (build.gradle.bak 내 versionCode 에 세팅된다.)
+      appVersionCode: 1
+
+      # 최소 지원 OS VersionCode (build.gradle.kts 내 minSdkVersion 에 세팅된다.)
+      minSdkVersion: 21
+
+      # 별도로 설정값 추가한 케이스. (예시)
+      useServerSelectScreen: false
+
+      # 각 용도에 따른 Server 정보.
+      server:
+
+        # Server 1 정보 (필수) - Default Release
+        - group: MatrixMobile Sample
+          data:
+            - name: MatrixMobile Sample
+              appId: matrix.mobile.mre
+              url: https://mre.inswave.kr
+
+        # Server 2 정보 (선택)
+        - group: MatrixMobile Release
+          data:
+            - name: Sample (MRE)
+              appId: matrix.mobile.mre
+              url: https://mre.inswave.kr
+
+    # develop profile (sample)
     develop:
-      applicationId: inswave.wmatrix.template
-      appName: Template
-      appVersion: 0.0.2
+      applicationId: matrix.mobile.template
+      appName: MatrixMobile (Dev)
+      appVersion: 0.0.1
       appVersionCode: 1
       minSdkVersion: 21
       useServerSelectScreen: true
       server:
-      - group: Servers
-        data:
-        - name: wmatrix
-          appId: inswave.wmatrix.mre
-          url: https://mre.inswave.kr
+        - group: MatrixMobile
+          data:
+            - name: Sample (MRE)
+              appId: matrix.mobile.mre
+              url: https://mre.inswave.kr
+
+    # test profile (sample)
+    tst:
+      applicationId: matrix.mobile.template
+      appName: MatrixMobile (Test)
+      appVersion: 0.0.1
+      appVersionCode: 1
+      minSdkVersion: 21
+      useServerSelectScreen: true
+      server:
+        - group: Sample (MRE)
+          data:
+            - name: MatrixMobile Sample
+              appId: matrix.mobile.mre
+              url: https://mre.inswave.kr
+        - group: MatrixMobile Test
+          data:
+            - name: MatrixMobile Test
+              url: http://192.168.151.113:8080
